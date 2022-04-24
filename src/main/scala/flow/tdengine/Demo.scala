@@ -4,9 +4,9 @@ package flow.tdengine
   * Created by iodone on {20-6-17}.
   */
 
-import java.util.Date
-
 import utils.Database
+
+import java.util.Date
 
 
 case class Meters(ts: Date, f1: Int, f2: Int, f3: Int)
@@ -20,9 +20,10 @@ object Demo extends App {
 
   def query(sql: String) = {
     val pst = taosConn.prepareStatement(sql)
-    pst.setFetchSize(1000)
+    pst.setFetchSize(1003)
     pst.executeQuery()
   }
+
 
   var resultList: List[Meters] = Nil
   var result = query("select * from meters limit 10")
