@@ -4,6 +4,7 @@ package quick.utils
   * Created by iodone on {20-6-10}.
   */
 import java.io.{BufferedReader, FileReader}
+import java.io.{File, FileOutputStream, BufferedOutputStream}
 import scala.util.{Try, Using}
 import scala.io.Source
 

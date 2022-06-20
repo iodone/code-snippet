@@ -9,6 +9,7 @@ object Stream extends App {
   val s2 = Iterator.continually(List(1,2,3)).flatten.take(10).toList
   val s3 = Iterator.iterate((1,1)) {acc => (acc._2, acc._1 + acc._2)}.map(_._1).take(10).toList
   val s4 = LazyList.iterate((1,1)) {acc => (acc._2, acc._1 + acc._2)}.map(_._1).take(10).toList
+  val s5 = Iterator.continually(List(1,2,3,4,5,6,7)).flatten.take(2)
 
 
   println(s1)
